@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 240px;
+  height: 240px;
+  border-radius: 5px;;
+  position: absolute;
+
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+
+<body>
+	<h1>Login</h1>
+		<form th:method="post" class="w-50" th:action="@{/login}" class="text-center">
+			<div>
+                <input type="email" id="email" placeholder="Email" name="email" style="border-radius: 5px; text-align: center; !important; min-width: 342px; max-width: 342px;">
+            </div>
+			<br>
+			<div>
+				<input type="password" id="password" placeholder="Password" name="password" style="border-radius: 5px; text-align: center; !important; min-width: 342px; max-width: 342px;">
+			</div>
+			<br>
+			<div>
+                <button type="submit" class="btn-secondary">Login</button>
+            </div>
+			<br>
+			<div>
+			<font color="green">Don't have an account? <a href="" target="_blank">Register</a></font>
+			</div>
+		</form>
+		<div class="text-center">
+		<button class="popup" onclick="myFunction()">Popup Video
+			<iframe class="popuptext" id="myPopup" width="720" height="1280" src="https://www.youtube.com/embed/QYh6mYIJG2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</button>
+		</div>
+    <footer align="center" style="padding-top: 15px; padding-bottom: 5px; position:fixed; bottom:0; width:100%;">
+            <div><font color="white">&copy; CopyRight Plamen Ilchevski 2019. All rights reserved.</font>
+			</div>
+    </footer>
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Add a Song</title>
+</head>
+
+<body>
+	<h1>Add a new Song</h1>
+		<form th:method="post" class="w-50" th:action="@{/addSong}" class="text-center">
+			<div>
+                <input type="text" id="songName" placeholder="Song Name" name="songName" style="border-radius: 5px; text-align: center; !important; min-width: 342px; max-width: 342px;">
+            </div>
+			<br>
+			<div>
+				<input type="text" id="songArtist" placeholder="Artist" name="songArtist" style="border-radius: 5px; text-align: center; !important; min-width: 342px; max-width: 342px;">
+			</div>
+			<br>
+			<div>
+				<input type="text" id="songAlbum" placeholder="Album" name="songAlbum" style="border-radius: 5px; text-align: center; !important; min-width: 342px; max-width: 342px;">
+			</div>
+			<br>
+			<div>
+				<input type="text" id="songYear" placeholder="Year" name="songYear" style="border-radius: 5px; text-align: center; !important; min-width: 342px; max-width: 342px;">
+			</div>
+			<br>
+			<div>
+				<input type="text" id="songLyrics" placeholder="Lyrics" name="songLyrics" style="border-radius: 5px; text-align: center; !important; min-width: 342px; max-width: 342px;">
+			</div>
+			<br>
+			<div>
+				<input type="text" id="songGenre" placeholder="Genre" name="songGenre" style="border-radius: 5px; text-align: center; !important; min-width: 342px; max-width: 342px;">
+			</div>
+			<br>
+			<div>
+                <button type="submit" class="btn-secondary">Add</button>
+            </div>
+		</form>
+    <footer align="center" style="padding-top: 15px; padding-bottom: 5px; position:fixed; bottom:0; width:100%;">
+            <div><font color="white">&copy; CopyRight Plamen Ilchevski 2019. All rights reserved.</font>
+			</div>
+    </footer>
+</body>
+</html>
